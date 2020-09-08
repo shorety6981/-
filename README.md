@@ -3,3 +3,4 @@
 * 变量类型
 * 条件语句
 * [循环语句](https://github.com/shorety6981/shorety-/blob/master/%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5.md)
+* 练习1
