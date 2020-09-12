@@ -65,31 +65,47 @@ s1 ^ s2
 {'r', 'd'}    
 
 ### 相关操作
-* 集合元素个数
+* 集合元素个数  
 len(s)
-* 清空集合
+* 清空集合  
 s.clear()
-* 判断元素是否在集合中存在
+* 判断元素是否在集合中存在  
   x in s  ： true，false
-* copy()	拷贝一个集合
+* copy()	拷贝一个集合  
 x = y.copy()
-* difference()	返回多个集合的差集
+* difference()	返回多个集合的差集  
 返回一个集合，元素包含在集合 x ，但不在集合 y   
 z = x.difference(y)    
-* difference_update()	移除集合中的元素，该元素在指定的集合也存在。
-* discard()	删除集合中指定的元素
-* intersection()	返回集合的交集
-* intersection_update()	返回集合的交集。
-* isdisjoint()	判断两个集合是否包含相同的元素，如果没有返回 True，否则返回 False。
-* issubset()	判断指定集合是否为该方法参数集合的子集。
-* issuperset()	判断该方法的参数集合是否为指定集合的子集
-* symmetric_difference()	返回两个集合中不重复的元素集合。
-* symmetric_difference_update()	移除当前集合中在另外一个指定集合相同的元素，并将另外一个指定集合中不同的元素插入到当前集合中。
-* union()	返回两个集合的并集
+* difference_update()	移除两个集合中都存在的元素  
+x.difference_update(y)    
 
+*difference_update() 方法与 difference() 方法的区别在于 difference() 方法返回一个移除相同元素的新集合，而 difference_update() 方法是直接在原来的集合中移除元素，没有返回值。
 
+* intersection()	用于返回两个或更多集合中都包含的元素，即交集   
+set.intersection(set1, set2 ... etc)
 
+* intersection_update()	返回集合的交集。  
+set.intersection_update(set1, set2 ... etc)   
+*intersection_update() 方法不同于 intersection() 方法，因为 intersection() 方法是返回一个新的集合，而 intersection_update() 方法是在原始的集合上移除不重叠的元素。  
 
+* isdisjoint()	判断两个集合是否包含相同的元素，如果没有返回 True，否则返回 False。  
+z = x.isdisjoint(y)  
+
+* issubset()	判断指定集合是否为该方法参数集合的子集。  
+z = x.issubset(y)   返回true，false
+
+* issuperset()	判断该方法的参数集合是否为指定集合的子集  
+z = x.issuperset(y)    返回true，false
+
+* symmetric_difference()	返回两个集合组成的新集合，但会移除两个集合的重复元素   
+z = x.symmetric_difference(y)
+
+* symmetric_difference_update()	移除当前集合中在另外一个指定集合相同的元素，并将另外一个指定集合中不同的元素插入到当前集合中。  
+x.symmetric_difference_update(y) 在原始集合 x 中移除与 y 集合中的重复元素，并将不重复的元素插入到集合 x 中  
+
+* union()	返回两个集合的并集，即包含了所有集合的元素，重复的元素只会出现一次  
+z = x.union(y)   
+set.union(set1, set2...)   
 
 
 * 集合和字典都不能放入可变对象   
