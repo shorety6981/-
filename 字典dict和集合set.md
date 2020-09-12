@@ -79,14 +79,16 @@ z = x.difference(y)
 * difference_update()	移除两个集合中都存在的元素  
 x.difference_update(y)    
 
-*difference_update() 方法与 difference() 方法的区别在于 difference() 方法返回一个移除相同元素的新集合，而 difference_update() 方法是直接在原来的集合中移除元素，没有返回值。
+*difference_update() 方法与 difference() 方法的区别在于   
+difference() 方法返回一个移除相同元素的新集合，而 difference_update() 方法是直接在原来的集合中移除元素，没有返回值。
 
 * intersection()	用于返回两个或更多集合中都包含的元素，即交集   
 set.intersection(set1, set2 ... etc)
 
 * intersection_update()	返回集合的交集。  
 set.intersection_update(set1, set2 ... etc)   
-*intersection_update() 方法不同于 intersection() 方法，因为 intersection() 方法是返回一个新的集合，而 intersection_update() 方法是在原始的集合上移除不重叠的元素。  
+*intersection_update() 方法不同于 intersection() 方法，  
+因为 intersection() 方法是返回一个新的集合，而 intersection_update() 方法是在原始的集合上移除不重叠的元素。  
 
 * isdisjoint()	判断两个集合是否包含相同的元素，如果没有返回 True，否则返回 False。  
 z = x.isdisjoint(y)  
@@ -101,7 +103,8 @@ z = x.issuperset(y)    返回true，false
 z = x.symmetric_difference(y)
 
 * symmetric_difference_update()	移除当前集合中在另外一个指定集合相同的元素，并将另外一个指定集合中不同的元素插入到当前集合中。  
-x.symmetric_difference_update(y) 在原始集合 x 中移除与 y 集合中的重复元素，并将不重复的元素插入到集合 x 中  
+x.symmetric_difference_update(y)   
+在原始集合 x 中移除与 y 集合中的重复元素，并将不重复的元素插入到集合 x 中  
 
 * union()	返回两个集合的并集，即包含了所有集合的元素，重复的元素只会出现一次  
 z = x.union(y)   
